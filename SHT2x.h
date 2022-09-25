@@ -125,7 +125,7 @@ private:
   bool      writeCmd(uint8_t cmd);
   bool      writeCmd(uint8_t cmd, uint8_t value);
   bool      readBytes(uint8_t n, uint8_t *val, uint8_t maxDuration);
-  TwoWire* _wire;
+  SoftwareI2C* _wire;
 
   uint8_t   _heatTimeout;   // seconds
   uint32_t  _lastRead;
