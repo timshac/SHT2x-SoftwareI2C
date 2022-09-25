@@ -10,7 +10,7 @@
 
 
 #include "Arduino.h"
-#include "Wire.h"
+#include "SoftwareI2C.h"
 
 
 #define SHT2x_LIB_VERSION             (F("0.2.0"))
@@ -48,7 +48,7 @@ public:
 #if defined(ESP8266) || defined(ESP32)
   bool begin(const int dataPin, const int clockPin);
 #endif
-  bool begin(TwoWire *wire = &Wire);
+  bool begin(SoftwareI2C *wire);
 
   //  check sensor is reachable over I2C
   bool isConnected();
