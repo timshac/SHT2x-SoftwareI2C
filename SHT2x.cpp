@@ -75,7 +75,7 @@ bool SHT2x::begin(const int dataPin, const int clockPin)
 #endif
 
 
-bool SHT2x::begin(TwoWire *wire)
+bool SHT2x::begin(SoftwareI2C *wire)
 {
   _wire = wire;
   _wire->begin();
